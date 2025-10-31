@@ -1,0 +1,104 @@
+/* 🌙 Fondo general del sitio */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background-image: url('img/fondo1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* ✅ El fondo se mantiene quieto */
+  transition: background-image 1s ease-in-out;
+  color: #fff;
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+
+  /* 🔥 Mejora visual y nitidez */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* ✨ Efecto de luz y saturación (ajustable) */
+  filter: brightness(1.1) contrast(1.05) saturate(1.2);
+}
+
+/* 🎃 Contenedor central */
+.container {
+  position: relative;
+  top: 25%;
+  transform: translateY(-25%);
+}
+
+/* ✨ Título con brillo animado */
+.titulo {
+  font-size: 2rem;
+  color: #ff9900;
+  text-shadow: 2px 2px 5px #000;
+  margin-bottom: 40px;
+  animation: brillo 2s infinite alternate;
+}
+
+@keyframes brillo {
+  from { text-shadow: 0 0 5px #fff, 0 0 15px #ff6600; }
+  to { text-shadow: 0 0 25px #ff3300, 0 0 35px #ff9900; }
+}
+
+/* 💕 Botones */
+.boton {
+  padding: 15px 40px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 💖 Botón SÍ */
+.si {
+  background-color: #ff6600;
+  color: white;
+}
+
+.si:hover {
+  background-color: #ffa31a;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ffb84d;
+}
+
+/* 😢 Botón NO */
+.no {
+  background-color: #6a0dad;
+  color: white;
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.no:hover {
+  background-color: #9932cc;
+  transform: scale(1.05);
+}
+
+/* 🧡 Mensaje final */
+.mensaje {
+  margin-top: 30px;
+  font-size: 1.3rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff7e6;
+  text-shadow: 1px 1px 3px #000;
+  line-height: 1.6;
+}
+
+/* ✨ Animación para mover el botón No */
+@keyframes mover {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(100px, -50px); }
+  50% { transform: translate(-80px, 60px); }
+  75% { transform: translate(120px, 80px); }
+  100% { transform: translate(0, 0); }
+}
